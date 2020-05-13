@@ -1,5 +1,5 @@
-# Name & Student ID
-Yuki Tsushima, 20M31065
+20M31065
+Yuki Tsushima
  
 # hpc_lecture
 

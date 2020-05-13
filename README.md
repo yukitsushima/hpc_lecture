@@ -1,3 +1,6 @@
+# Name & Student ID
+Yuki Tsushima, 20M31065
+ 
 # hpc_lecture
 
 |          | Topic                                | Sample code               |

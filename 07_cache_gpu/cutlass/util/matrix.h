@@ -341,32 +341,6 @@ public:
 
 
     /**
-     * Returns matrix equality
-     */
-    bool operator==(const matrix<value_t> &mat) const
-    {
-        int max_ulps = 30;
-
-        if (_m != mat._m || _n != mat._n)
-        {
-            fprintf(stderr, "Error: dimension mismatch during matrix comparison.\n"); exit(1);
-        }
-
-        for (int j = 0; j < _n; j++)
-        {
-            for (int i = 0; i < _m; i++)
-            {
-                if (!almost_equal_ulps(_h_data[i + j * _m], mat._h_data[i + j * _m], max_ulps))
-                {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-
-    /**
      * Computes this = (alpha * op(A) * op(B)) + (beta * this), specialized for gemm_nn
      */
     template <typename multiplicand_t>

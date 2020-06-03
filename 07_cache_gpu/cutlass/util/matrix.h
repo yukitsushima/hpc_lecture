@@ -367,15 +367,6 @@ public:
 
 
     /**
-     * Returns matrix inequality
-     */
-    bool operator!=(const matrix<value_t> &mat) const
-    {
-        return !(*this == mat);
-    }
-
-
-    /**
      * Computes this = (alpha * op(A) * op(B)) + (beta * this), specialized for gemm_nn
      */
     template <typename multiplicand_t>

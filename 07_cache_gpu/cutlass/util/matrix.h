@@ -184,15 +184,15 @@ public:
      * Return the distance (in items) within memory between elements of two
      * consecutive columns which have the same row index, subject to the optional \p transform op
      */
-    int leading_dim(matrix_transform_t transpose_op = matrix_transform_t::NonTranspose) const
-    {
-        switch (transpose_op)
-        {
-            case matrix_transform_t::NonTranspose :    return _m;
-            case matrix_transform_t::Transpose :       return _n;
-            default: return 0;
-        }
-    }
+//    int leading_dim(matrix_transform_t transpose_op = matrix_transform_t::NonTranspose) const
+//    {
+//        switch (transpose_op)
+//        {
+//            case matrix_transform_t::NonTranspose :    return _m;
+//            case matrix_transform_t::Transpose :       return _n;
+//            default: return 0;
+//        }
+//    }
 
     /**
      * Get host data pointer

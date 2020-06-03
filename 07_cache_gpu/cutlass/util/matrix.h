@@ -249,24 +249,6 @@ public:
     }
 
 
-
-	/**
-	 * Initialize matrix values using the random number \p generator.  The
-     * \p generator reference is assumed to be a nullary functor that returns
-     * values convertible to the matrix \p value_t.
-     */
-    template <typename T>
-    void fill_random(T & generator)
-    {
-        for (int j = 0; j < _n; j++)
-        {
-            for (int i = 0; i < _m; i++)
-            {
-                _h_data[i + j * _m] = (value_t) generator();
-            }
-        }
-    }
-
   void random() {
     for (int j = 0; j < _n; j++) {
       for (int i = 0; i < _m; i++) {

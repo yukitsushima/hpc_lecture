@@ -214,10 +214,10 @@ public:
     /**
      * Get device data pointer
      */
-    value_t const* d_data() const
-    {
-        return _d_data;
-    }
+//    value_t const* d_data() const
+//    {
+//        return _d_data;
+//    }
 
     /**
      * Get device data pointer

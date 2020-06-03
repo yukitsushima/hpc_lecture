@@ -341,17 +341,6 @@ public:
     //-----------------------------------------------------------------------------
 
 
-    static bool almost_equal_ulps(float a, float b, int max_ulps)
-    {
-        if (a == b)
-            return true;
-        int32_t int_diff = abs(*(int32_t*)&a - *(int32_t*)&b);
-        if (int_diff <= max_ulps)
-            return true;
-        return false;
-    }
-
-
     static bool almost_equal_ulps(double a, double b, int max_ulps)
     {
         if (a == b)

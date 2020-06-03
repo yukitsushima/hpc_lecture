@@ -340,17 +340,6 @@ public:
     // Floating point "almost-equal" utilities
     //-----------------------------------------------------------------------------
 
-    static bool almost_equal_ulps(half_t a, half_t b, int max_ulps)
-    {
-        if (a == b)
-            return true;
-
-        int32_t int_diff = abs(a.raw() - b.raw());
-        if (int_diff <= max_ulps)
-            return true;
-        return false;
-    }
-
 
     static bool almost_equal_ulps(float a, float b, int max_ulps)
     {

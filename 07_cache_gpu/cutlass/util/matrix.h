@@ -249,21 +249,6 @@ public:
     }
 
 
-	/**
-	 * Initialize matrix values such that all the elements of the principal diagonal
-     * are ones and all other elements are zeros
-     */
-    void fill_identity()
-    {
-        for (int j = 0; j < _n; j++)
-        {
-            for (int i = 0; i < _m; i++)
-            {
-                _h_data[i + j * _m] = host_value_t(i == j ? 1 : 0);
-            }
-        }
-    }
-
 
 	/**
 	 * Initialize matrix values using the random number \p generator.  The

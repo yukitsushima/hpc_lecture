@@ -138,15 +138,15 @@ public:
     /**
      * Return the height of the matrix, subject to the optional \p transpose_op
      */
-    int height(matrix_transform_t transpose_op = matrix_transform_t::NonTranspose) const
-    {
-        switch (transpose_op)
-        {
-            case matrix_transform_t::NonTranspose :    return _m;
-            case matrix_transform_t::Transpose :       return _n;
-            default: return -1;
-        }
-    }
+//    int height(matrix_transform_t transpose_op = matrix_transform_t::NonTranspose) const
+//    {
+//        switch (transpose_op)
+//        {
+//            case matrix_transform_t::NonTranspose :    return _m;
+//            case matrix_transform_t::Transpose :       return _n;
+//            default: return -1;
+//        }
+//    }
 
 
     /**

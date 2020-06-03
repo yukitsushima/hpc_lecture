@@ -152,15 +152,15 @@ public:
     /**
      * Return the width of the matrix, subject to the optional \p transpose_op
      */
-    int width(matrix_transform_t transpose_op = matrix_transform_t::NonTranspose) const
-    {
-        switch (transpose_op)
-        {
-            case matrix_transform_t::NonTranspose :    return _n;
-            case matrix_transform_t::Transpose :       return _m;
-            default: return -1;
-        }
-    }
+//    int width(matrix_transform_t transpose_op = matrix_transform_t::NonTranspose) const
+//    {
+//        switch (transpose_op)
+//        {
+//            case matrix_transform_t::NonTranspose :    return _n;
+//            case matrix_transform_t::Transpose :       return _m;
+//            default: return -1;
+//        }
+//    }
 
 
     /**

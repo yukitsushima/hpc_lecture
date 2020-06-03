@@ -206,10 +206,10 @@ public:
     /**
      * Get host data pointer
      */
-    value_t const* h_data() const
-    {
-        return _h_data.data();
-    }
+//    value_t const* h_data() const
+//    {
+//        return _h_data.data();
+//    }
 
     /**
      * Get device data pointer

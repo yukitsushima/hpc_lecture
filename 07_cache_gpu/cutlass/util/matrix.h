@@ -197,10 +197,10 @@ public:
     /**
      * Get host data pointer
      */
-    value_t* h_data()
-    {
-        return _h_data.data();
-    }
+//    value_t* h_data()
+//    {
+//        return _h_data.data();
+//    }
 
 
     /**

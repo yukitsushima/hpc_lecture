@@ -1,5 +1,7 @@
 20M31065
 Yuki Tsushima
+Final report file is in 13_pde.
+Normal C++ code is 13_pde/main.cpp.
  
 # hpc_lecture
 

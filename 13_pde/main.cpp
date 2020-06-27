@@ -82,13 +82,13 @@ std::vector<std::vector<double>> pressure_poisson(std::vector<std::vector<double
 std::tuple<std::vector<std::vector<double>>,std::vector<std::vector<double>>,std::vector<std::vector<double>>>
 cavity_flow(int nt,std::vector<std::vector<double>> u,std::vector<std::vector<double>> v,
   double dt,double dx,double dy, std::vector<std::vector<double>> p,double rho,double nu,int nx, int ny,int nit) {
-  std::vector<std::vector<double>> b(ny,std::vector<double>(nx,0));
+  std::vector<std::vector<double>> b;
   for (int i = 0; i < nt; i++) {
     std::vector<std::vector<double>> u_next(nx,std::vector<double>(ny,0));
     std::vector<std::vector<double>> v_next(nx,std::vector<double>(ny,0));
     b = build_up_b(rho,dt,u,v,dx,dy,nx,ny);
     p = pressure_poisson(p,dx,dy,b,nx,ny,nit);
-    //Process u,v,p -> u_next,v_next,p_next
+    //Process u,v -> u_next,v_next
     for (int x = 1; x < nx-1; x++) {
       for (int y = 1; y < ny-1; y++) {
         u_next[x][y] =
@@ -139,4 +139,5 @@ int main(int argc, char** argv) {
   write_2dvecT(u,nx,ny,"u.csv");
   write_2dvecT(v,nx,ny,"v.csv");
   write_2dvecT(p,nx,ny,"p.csv");
+  return 0;
 }
